@@ -1,0 +1,26 @@
+.h {
+    &--primary {
+        text-transform: uppercase;
+        font-size: 4.8rem;
+        font-weight: 300;
+        margin-bottom: 3rem;
+        transition: all 0.4s;
+
+        &__spec {
+            display: inline-block;
+            background-image: linear-gradient(to right, transparent 0%, var(--color-main) 50%, var(--color-main) 50%);
+            transform: skew(-10deg);
+
+            span {
+                transform: skew(10deg);
+            }
+        }
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &--tertiary {
+    }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "titanyc_gym",
+  "version": "1.0.0",
+  "description": "Landing page for Titanyc Gym",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "prefix": "postcss --use autoprefixer -b 'last 20 versions' css/style.comp.css -o css/style.prefix.css",
+    "compress": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "build": "npm-run-all compile:sass prefix compress"
+  },
+  "author": "Angel",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "node-sass": "^6.0.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.11",
+    "postcss-cli": "^9.0.2"
+  }
+}
