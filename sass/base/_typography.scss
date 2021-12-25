@@ -21,6 +21,24 @@
         }
     }
 
-    &--tertiary {
+    &--two {
+        // Add font-weight, fix the color
+        color: var(--color-main-dark-2);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        background-image: linear-gradient(to right bottom, var(--color-main-dark-4), var(--color-main));
+        text-transform: uppercase;
+        font-size: 3.8rem;
     }
+
+    &--three {
+        font-size: 2.4rem;
+        margin-bottom: 1.2rem;
+    }
+}
+
+.description {
+    font-size: 1.8rem;
+    line-height: 2;
 }

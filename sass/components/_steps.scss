@@ -1,0 +1,23 @@
+.steps {
+    column-gap: 9rem;
+    row-gap: 12.8rem;
+    align-items: center;
+    justify-items: center;
+
+    &__num {
+        font-size: 7rem;
+        font-weight: 700;
+        color: #ccc;
+    }
+
+    &__img {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+
+    &__desc-box {
+        align-self: start;
+    }
+}
