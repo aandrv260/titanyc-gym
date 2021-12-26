@@ -17,6 +17,7 @@ $color-black: #000;
     --color-main-dark-2: #804916;
     --color-main-dark-3: #b3661e;
     --color-main-dark-4: #cc7522;
+    --color-main-dark-5: #e68327;
 
     --color-main-light-1: #ffe9d5;
     --color-main-light-2: #ffd3aa;
@@ -68,6 +69,7 @@ a {
 
 button {
     border: none;
+    border-radius: 7px;
     cursor: pointer;
     font-size: inherit;
 }

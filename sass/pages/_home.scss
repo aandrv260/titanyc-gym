@@ -1,5 +1,7 @@
 .section {
-    &--get-started {
+    &--get-started,
+    &--featured-in,
+    &--pricing {
         background-color: var(--color-grey-light-1);
     }
 
@@ -8,13 +10,13 @@
         padding: 8rem 4.8rem;
     }
 
-    &--featured-in {
-        background-color: var(--color-grey-light-1);
-    }
-
     &--trainers {
         // background-color: var(--color-main-light-1);
         background-color: #fff4ea;
+    }
+
+    &--pricing {
+        padding: 8rem 4.8rem 9.8rem;
     }
 }
 

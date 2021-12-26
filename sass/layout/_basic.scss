@@ -3,10 +3,15 @@
     margin: 0 auto;
 }
 
-.flex {
+.flex,
+.flex-column {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.flex-column {
+    flex-direction: column;
 }
 
 .grid {
