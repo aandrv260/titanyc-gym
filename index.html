@@ -7,28 +7,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Titanyc Gym &ndash; More than just a training session</title>
 
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap"
-        rel="stylesheet"> -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css" />
+
+    <script defer type="module" src="js/main.js"></script>
 </head>
 
 <body>
+    <div class="mob-nav flex">
+        <svg class="mob-nav__icon" xmlns="http://www.w3.org/2000/svg" fill="#e68327" viewBox="0 0 256 256">
+            <rect width="256" height="256" fill="none"></rect>
+            <line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="#e68327" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="8"></line>
+            <line x1="40" y1="64" x2="216" y2="64" fill="none" stroke="#e68327" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="8"></line>
+            <line x1="40" y1="192" x2="216" y2="192" fill="none" stroke="#e68327" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="8"></line>
+        </svg>
+    </div>
+    <div class="modal hidden">
+        <div class="modal__background">&nbsp;</div>
+        <div class="modal__content">
+            <span class="modal__close">X</span>
+            <div class="u-center-text u-margin-bottom-md">
+                <h3 class="modal__heading">Get Started for Free</h3>
+                <p class="description">We want to help you get in form and live the life you deserve.</p>
+            </div>
+
+            <div class="u-margin-bottom-md">
+                <div class="modal__benefits">
+                    <div class="modal__benefit flex">
+                        <div class="modal__icon-container">
+                            <svg class="modal__icon" xmlns="http://www.w3.org/2000/svg" fill="#e68327"
+                                viewBox="0 0 256 256">
+                                <rect width="256" height="256" fill="none"></rect>
+                                <rect x="24" y="56" width="208" height="144" rx="8" fill="none" stroke="#e68327"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></rect>
+                                <line x1="168" y1="168" x2="200" y2="168" fill="none" stroke="#e68327"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></line>
+                                <line x1="120" y1="168" x2="136" y2="168" fill="none" stroke="#e68327"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></line>
+                                <line x1="24" y1="96.9" x2="232" y2="96.9" fill="none" stroke="#e68327"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></line>
+                            </svg>
+                        </div>
+                        <span class="modal__benefit-desc">No initial payment required</span>
+                    </div>
+
+                    <div class="modal__benefit flex">
+                        <div class="modal__icon-container">
+                            <svg class="modal__icon" xmlns="http://www.w3.org/2000/svg" fill="#e68327"
+                                viewBox="0 0 256 256">
+                                <rect width="256" height="256" fill="none"></rect>
+                                <line x1="84" y1="32" x2="84" y2="72" fill="none" stroke="#e68327"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></line>
+                                <line x1="84" y1="116" x2="84" y2="224" fill="none" stroke="#e68327"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></line>
+                                <path d="M112,32l8,48a36,36,0,0,1-72,0l8-48" fill="none" stroke="#e68327"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></path>
+                                <path d="M204,160H148S160,48,204,32V224" fill="none" stroke="#e68327"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></path>
+                            </svg>
+                        </div>
+                        <span class="modal__benefit-desc">Free Nutrition Consultation</span>
+                    </div>
+
+                    <div class="modal__benefit flex">
+                        <div class="modal__icon-container">
+                            <svg class="modal__icon" xmlns="http://www.w3.org/2000/svg" fill="#e68327"
+                                viewBox="0 0 256 256">
+                                <rect width="256" height="256" fill="none"></rect>
+                                <line x1="88" y1="24" x2="88" y2="56" fill="none" stroke="#e68327"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></line>
+                                <line x1="120" y1="24" x2="120" y2="56" fill="none" stroke="#e68327"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></line>
+                                <line x1="152" y1="24" x2="152" y2="56" fill="none" stroke="#e68327"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></line>
+                                <line x1="32" y1="216" x2="208" y2="216" fill="none" stroke="#e68327"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></line>
+                                <path d="M83.3,216A88,88,0,0,1,32,136V88H208v48a88,88,0,0,1-51.3,80" fill="none"
+                                    stroke="#e68327" stroke-linecap="round" stroke-linejoin="round" stroke-width="8">
+                                </path>
+                                <path d="M208,88h0a32,32,0,0,1,32,32v8a32,32,0,0,1-32,32h-3.4" fill="none"
+                                    stroke="#e68327" stroke-linecap="round" stroke-linejoin="round" stroke-width="8">
+                                </path>
+                            </svg>
+                        </div>
+                        <span class="modal__benefit-desc">1 month half price drinks</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="u-center-text">
+                <button class="btn btn--cta">Join Now</button>
+            </div>
+        </div>
+    </div>
     <header class="header">
-        <nav class="header__nav">
+        <nav class="header__nav flex">
             <ul class="header__nav-list flex">
                 <li class="header__nav-item">
                     <a href="#" class="header__nav-link">Home</a>
                 </li>
                 <li class="header__nav-item">
                     <a href="#" class="header__nav-link">Plans</a>
+
                 </li>
                 <li class="header__nav-item">
                     <a href="#" class="header__nav-link">News</a>
@@ -43,15 +129,16 @@
                     <a href="#" class="header__nav-link">Contacts</a>
                 </li>
             </ul>
+
         </nav>
         <div class="header__text-box">
             <h1 class="h h--primary">
                 It's <span class="h--primary__spec"><span>more</span></span> than an <span
                     class="h--primary__spec">exercise</span> </span>
             </h1>
-            <span class="header__subheading">Live a healthier life</span>
+            <span class="header__subheading">Find the right plan and coach for you and start changing your life</span>
 
-            <a href="#" class="header__cta">Try for free</a>
+            <a href="#" class="header__cta btn btn--cta">Join now for free</a>
         </div>
     </header>
 
@@ -122,9 +209,9 @@
         </section>
 
         <section class="section section--trainers">
-            <div class="trainers container grid grid--2-cols">
+            <div class="trainers container">
                 <div class="trainers__content-box">
-                    <h3 class="trainers__heading--1 u-center-text u-margin-bottom-md">Get support from our qualified
+                    <h3 class="trainers__heading--1 u-center-text">Get support from our qualified
                         trainers
                     </h3>
 
@@ -606,29 +693,143 @@
 -->
     </main>
 
-    <!-- <footer class="footer">
-        <div class="footer__logo-box">
-            <h3 class="footer__logo">Titanyc Gym</h3>
+    <footer class="footer">
+        <div class="footer__content container grid grid--4-cols">
 
-            <div class="footer__desc-box">
-                <h4 class="footer__heading">About us</h4>
-                <p class="description">We want to help people lead a healthier life</p>
-            </div>
+            <div class="footer__logo-box">
+                <h3 class="footer__logo">Titanyc Gym Logo</h3>
 
-            <div class="footer__desc-box">
-                <div class="footer__contact-box">
-                    <svg class="footer__contacts-icon" xmlns="http://www.w3.org/2000/svg" fill="#ff922b"
-                        viewBox="0 0 256 256">
-                        <rect width="256" height="256" fill="none"></rect>
-                        <path
-                            d="M92.5,124.8a83.6,83.6,0,0,0,39,38.9,8,8,0,0,0,7.9-.6l25-16.7a7.9,7.9,0,0,1,7.6-.7l46.8,20.1a7.9,7.9,0,0,1,4.8,8.3A48,48,0,0,1,176,216,136,136,0,0,1,40,80,48,48,0,0,1,81.9,32.4a7.9,7.9,0,0,1,8.3,4.8l20.1,46.9a8,8,0,0,1-.6,7.5L93,117A8,8,0,0,0,92.5,124.8Z"
-                            fill="none" stroke="#ff922b" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="8"></path>
-                    </svg>
+                <div class="footer__desc-box">
+                    <h4 class="footer__heading--sm">About us</h4>
+                    <p class="description">We want to help people lead a healthier life</p>
+                </div>
+
+                <div class="footer__desc-box">
+                    <h4 class="footer__heading--sm">Contact Us</h4>
+                    <div class="footer__contact-box">
+                        <svg class="footer__contacts-icon" xmlns="http://www.w3.org/2000/svg" fill="#ff922b"
+                            viewBox="0 0 256 256">
+                            <rect width="256" height="256" fill="none"></rect>
+                            <path d="M32,56H224a0,0,0,0,1,0,0V192a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V56A0,0,0,0,1,32,56Z"
+                                fill="none" stroke="#ff922b" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="12"></path>
+                            <polyline points="224 56 128 144 32 56" fill="none" stroke="#ff922b" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="12"></polyline>
+                        </svg>
+                        <a class="footer__link" href="tel:hello@example.com">hello@example.com</a>
+                    </div>
+                    <div class="footer__contact-box">
+                        <svg class="footer__contacts-icon" xmlns="http://www.w3.org/2000/svg" fill="#ff922b"
+                            viewBox="0 0 256 256">
+                            <rect width="256" height="256" fill="none"></rect>
+                            <path
+                                d="M92.5,124.8a83.6,83.6,0,0,0,39,38.9,8,8,0,0,0,7.9-.6l25-16.7a7.9,7.9,0,0,1,7.6-.7l46.8,20.1a7.9,7.9,0,0,1,4.8,8.3A48,48,0,0,1,176,216,136,136,0,0,1,40,80,48,48,0,0,1,81.9,32.4a7.9,7.9,0,0,1,8.3,4.8l20.1,46.9a8,8,0,0,1-.6,7.5L93,117A8,8,0,0,0,92.5,124.8Z"
+                                fill="none" stroke="#ff922b" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="12"></path>
+                        </svg>
+                        <a class="footer__link" href="mailto:+1 567 890 9900">+1-567-890-9900</a>
+                    </div>
                 </div>
             </div>
+
+            <div class="footer__links">
+                <div class="u-center-text">
+
+                    <h4 class="footer__heading--big">Information</h4>
+                </div>
+                <ul class="footer__list flex">
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">About Us</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Terms of Service</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Privacy Policy</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Cookies and GDPR</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__links">
+                <div class="u-center-text">
+
+                    <h4 class="footer__heading--big">Help and Apps</h4>
+                </div>
+                <ul class="footer__list flex">
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Help Center</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">FAQ</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">IOS app</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Android app</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__subscribe">
+                <h4 class="footer__heading--big">Subscribe for fitness advice</h4>
+
+                <form action="#" class="footer__form">
+                    <input class="footer__input" type="email" placeholder="Enter your email address" />
+                    <button class="footer__btn">&rarr;</button>
+                </form>
+
+                <!-- TODO: Add the right social icons -->
+
+                <!--
+                <div class="footer__social-links">
+                    <a href="#">
+                        <svg class="footer__social-link footer__social-link--fb" xmlns="http://www.w3.org/2000/svg"
+                            fill="#e68327" viewBox="0 0 256 256">
+                            <rect width="256" height="256" fill="none"></rect>
+                            <circle cx="128" cy="128" r="96" fill="none" stroke="#e68327" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="12"></circle>
+                            <path d="M168,88H152a23.9,23.9,0,0,0-24,24V224" fill="none" stroke="#e68327"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></path>
+                            <line x1="96" y1="144" x2="160" y2="144" fill="none" stroke="#e68327" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="12"></line>
+                        </svg>
+                    </a>
+
+                    <a href="#">
+                        <svg class="footer__social-link footer__social-link--ig" xmlns="http://www.w3.org/2000/svg"
+                            width="192" height="192" fill="#e68327" viewBox="0 0 256 256">
+                            <rect width="256" height="256" fill="none"></rect>
+                            <circle cx="128" cy="128" r="40" fill="none" stroke="#e68327" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="12"></circle>
+                            <rect x="36" y="36" width="184" height="184" rx="48" fill="none" stroke="#e68327"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></rect>
+                            <circle cx="180" cy="76" r="10"></circle>
+                        </svg>
+                    </a>
+                </div>
+                -->
+            </div>
+
+
         </div>
-    </footer> -->
+
+        <div class="footer__secondary container">
+            <div class="footer__copy-container">
+                <span class="footer__copy">
+                    &copy;2021 Titanyc Gym. All rights reserved.
+                </span>
+            </div>
+
+            <div class="footer__created-by">
+                <span class="footer__copy">Created by Angel Andreev</span>
+            </div>
+
+        </div>
+    </footer>
 
 </body>
 

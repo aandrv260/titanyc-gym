@@ -6,6 +6,11 @@
     box-sizing: inherit;
 }
 
+::selection {
+    background-color: var(--color-main);
+    color: #fff;
+}
+
 // Global SASS variables
 $color-black: #000;
 
@@ -61,6 +66,7 @@ body {
     // font-family: "Montserrat", sans-serif;
     line-height: 1.5;
     background-color: #fff;
+    position: relative;
 }
 
 a {
@@ -79,6 +85,13 @@ select {
     font-family: inherit;
     font-size: inherit;
     color: inherit;
+    border-radius: 7px;
+    outline: none;
+    border: none;
+
+    &:focus {
+        outline: 1px solid #333;
+    }
 }
 
 ul {

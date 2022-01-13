@@ -6,10 +6,24 @@
     margin-bottom: 4.8rem !important;
 }
 
+.u-margin-bottom-extra-md {
+    margin-bottom: 6.4rem !important;
+}
+
 .u-margin-bottom-big {
     margin-bottom: 8rem !important;
 }
 
 .u-margin-bottom-extra-big {
     margin-bottom: 10rem !important;
+}
+
+.mega-hidden,
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.mega-hidden {
+    transform: scale(0);
 }

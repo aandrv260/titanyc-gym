@@ -1,14 +1,19 @@
 .h {
     &--primary {
         text-transform: uppercase;
-        font-size: 4.8rem;
+        font-size: 4.5rem;
         font-weight: 300;
+        letter-spacing: 3.5px;
         margin-bottom: 3rem;
         transition: all 0.4s;
 
+        @include adaptToDevice(tab-port) {
+            font-size: 4rem;
+        }
+
         &__spec {
             display: inline-block;
-            background-image: linear-gradient(to right, transparent 0%, var(--color-main) 50%, var(--color-main) 50%);
+            background-image: linear-gradient(to right, transparent 5%, var(--color-main) 50%, var(--color-main) 50%);
             transform: skew(-10deg);
 
             span {
@@ -30,15 +35,32 @@
         background-image: linear-gradient(to right bottom, var(--color-main-dark-4), var(--color-main));
         text-transform: uppercase;
         font-size: 3.8rem;
+
+        @include adaptToDevice(tab-land) {
+            font-size: 3.2rem;
+        }
+
+        @include adaptToDevice(tab-port) {
+            font-size: 2.8rem;
+        }
     }
 
     &--three {
         font-size: 2.4rem;
         margin-bottom: 1.2rem;
+
+        @include adaptToDevice(tab-port) {
+            font-size: 2.2rem;
+        }
     }
 }
 
 .description {
     font-size: 1.8rem;
     line-height: 2;
+    color: var(--color-grey-dark-2);
+
+    @include adaptToDevice(tab-land) {
+        font-size: 1.6rem;
+    }
 }

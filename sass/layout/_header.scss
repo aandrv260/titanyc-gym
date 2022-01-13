@@ -1,31 +1,47 @@
 .header {
-    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8rem;
+    flex-direction: column;
     color: #fff;
+    padding: 1rem 0 20.8rem;
     background-image: linear-gradient(to right bottom, rgba($color-black, 0.7), rgba($color-black, 0.7)),
         url(../../img/hero.jpg);
     background-size: cover;
     position: relative;
 
     &__nav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        flex-direction: column;
+        // gap: 1.6rem;
         padding: 3.4rem 0;
     }
 
     &__nav-list {
+        padding-bottom: 1.6rem;
         gap: 8rem;
+
+        @include adaptToDevice(tab-port) {
+            display: none;
+        }
     }
 
     &__nav-item {
+        position: relative;
+    }
+
+    &__nav-item:hover &__nav-dropdown {
+        opacity: 1;
+        visibility: visible;
     }
 
     &__nav-link {
         &:link,
         &:visited {
-            font-size: 2rem;
+            font-size: 1.8rem;
             color: inherit;
-            // text-transform: uppercase;
+            font-weight: 300;
+            text-transform: uppercase;
             transition: all 0.3s;
         }
 
@@ -36,53 +52,61 @@
     }
 
     &__text-box {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         display: flex;
         flex-direction: column;
         flex: 1;
     }
 
     &__subheading {
-        text-transform: capitalize;
+        color: #bbb;
         font-size: 2.2rem;
         text-align: center;
         margin-bottom: 6.4rem;
+
+        @include adaptToDevice(tab-port) {
+            font-size: 1.8rem;
+        }
     }
 
     &__cta {
-        &:link,
-        &:visited {
-            display: inline-block;
-            padding: 1.6rem 3.2rem;
-            border-radius: 8px;
-            background-color: transparent;
-            color: inherit;
-            border: 1px double var(--color-main);
-            text-transform: uppercase;
-            font-size: 1.8rem;
-            font-weight: 500;
-            align-self: center;
-            transition: all 0.3s ease-out;
-        }
-
-        &:hover {
-            background-color: var(--color-main);
-            transform: translateY(-0.6rem);
-        }
-
-        &:active {
-            transform: translateY(0);
-        }
+        display: inline-block;
+        align-self: center;
+        border-radius: 6px;
+        text-transform: uppercase;
     }
-}
 
-.logo {
-    color: inherit;
-    text-transform: uppercase;
-    font-size: 3.3rem;
-    font-weight: 500;
-    margin-left: -6rem;
+    //     &__cta {
+    //         &:link,
+    //         &:visited {
+    //             display: inline-block;
+    //             padding: 1.6rem 3.2rem;
+    //             border-radius: 8px;
+    //             background-color: transparent;
+    //             color: inherit;
+    //             border: 1px double var(--color-main);
+    //             text-transform: uppercase;
+    //             font-size: 1.8rem;
+    //             font-weight: 500;
+    //             align-self: center;
+    //             transition: all 0.3s ease-out;
+    //         }
+
+    //         &:hover {
+    //             background-color: var(--color-main);
+    //             transform: translateY(-0.6rem);
+    //         }
+
+    //         &:active {
+    //             transform: translateY(0);
+    //         }
+    //     }
+    // }
+
+    .logo {
+        color: inherit;
+        text-transform: uppercase;
+        font-size: 3.3rem;
+        font-weight: 500;
+        margin-left: -6rem;
+    }
 }

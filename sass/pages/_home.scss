@@ -17,18 +17,38 @@
 
     &--pricing {
         padding: 8rem 4.8rem 9.8rem;
+
+        @include adaptToDevice(tab-land) {
+            padding: 8rem 2.4rem 9.8rem;
+        }
     }
 }
 
 .trainers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 4.8rem;
     align-items: center;
+
+    @include adaptToDevice(tab-port) {
+        grid-template-columns: 1fr;
+    }
+
     &__content-box {
     }
 
     &__heading--1 {
         color: #444;
         font-size: 2.8rem;
+        margin-bottom: 4.8rem;
+
+        @include adaptToDevice(tab-land) {
+            font-size: 2.4rem;
+        }
+
+        @include adaptToDevice(tab-port) {
+            margin-bottom: 6.4rem;
+        }
     }
 
     &__heading--2 {
